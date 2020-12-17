@@ -17,6 +17,12 @@ buildPythonPackage {
 
   nativeBuildInputs = [ cmake ];
 
+  buildPhase = ''
+    cd ..;
+    ./make.sh
+    cd py_ext
+  '';
+
   # no test data
   doCheck = false;
 
